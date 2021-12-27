@@ -237,7 +237,10 @@ a:focus,
   font-weight: 300;
   line-height: 30px;
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+}
+.intro p:last-child {
+  margin-bottom: 40px;
 }
 header .intro-text {
   padding-top: 350px;
