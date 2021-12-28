@@ -1,22 +1,13 @@
+import { Navigation } from "../navigation"
+
 export const Jhon = (props) => {
+  console.log("enter")
   return (
-    <header id="header">
-      <div className="intro">
-        <div className="overlay">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-8 col-md-offset-2 intro-text">
-                <h1>
-                  {props.data ? props.data.title : "Loading"}
-                  <span></span>
-                </h1>
-                <p>{props.data ? props.data.paragraph1 : "Loading"}</p>
-                <p>{props.data ? props.data.paragraph2 : "Loading"}</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div>
+      <Navigation />
+      <div className="col-md-8 col-md-offset-2 intro-text">
+        <h1>wellcome</h1>
       </div>
-    </header>
+    </div>
   )
 }

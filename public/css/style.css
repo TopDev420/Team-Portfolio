@@ -607,3 +607,7 @@ label {
     margin: 50px 0;
   }
 }
+
+.page-scroll {
+  font-size: 200px !important;
+}

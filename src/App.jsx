@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom"
 import { useState, useEffect } from "react"
 import { Navigation } from "./components/navigation"
 import { Header } from "./components/header"
@@ -27,25 +32,22 @@ const App = () => {
 
   return (
     <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              <Navigation />
-              <Header data={landingPageData.Header} />
-              <Features data={landingPageData.Features} />
-              <About data={landingPageData.About} />
-              <Services data={landingPageData.Services} />
-              <Gallery data={landingPageData.Gallery} />
-              <Testimonials data={landingPageData.Testimonials} />
-              <Team data={landingPageData.Team} />
-              <Contact data={landingPageData.Contact} />
-            </div>
-          }
-        ></Route>
-        <Route path="/members/jhon" element={<div>sfdsdf</div>}></Route>
-      </Routes>
+      <Switch>
+        <Route path="/members/jhon" element={<div>opk09k</div>}>
+          <Jhon />
+        </Route>
+        <Route path="/*" element={<div></div>}>
+          <Navigation />
+          <Header data={landingPageData.Header} />
+          <Features data={landingPageData.Features} />
+          <About data={landingPageData.About} />
+          <Services data={landingPageData.Services} />
+          <Gallery data={landingPageData.Gallery} />
+          <Testimonials data={landingPageData.Testimonials} />
+          <Team data={landingPageData.Team} />
+          <Contact data={landingPageData.Contact} />
+        </Route>
+      </Switch>
     </Router>
   )
 }
